@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>Voilà le resultat</p>
+    <label for="ville-select">Choisir une ville:</label>
+
+    <form action="apply_ville">
+        <select name="ville" id="ville-select" onchange="if(this.value != 0) { this.form.submit(); }">
+            <option value="0">--Choisir une Ville--</option>
+            <option value="PARIS">PARIS</option>
+            <option value="MARSEILLE">MARSEILLE</option>
+            <option value="LYON">LYON</option>
+        </select>
+    </from>
+  </body>
+  {{plot_html|safe}}
+</html>
