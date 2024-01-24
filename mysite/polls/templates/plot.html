@@ -6,8 +6,9 @@
     <title>My test page</title>
   </head>
   <body>
-    <a href="{% url 'Choix' %}">Nombre de ventes par arrondissement des grandes villes de France en 2023</a><br>
-    <a href="{% url 'choix1' %}">Choisir l'abscisse et l'ordonnée</a><br>
+    {{absc|safe}}{{ord|safe}}<br>
+    
+    <a href="{% url 'accueil' %}">Page d'accueil</a>
     
   </body>
   

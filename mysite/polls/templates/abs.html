@@ -6,19 +6,17 @@
     <title>My test page</title>
   </head>
   <body>
-    <p>Voilà le resultat</p>
-    <label for="ville-select">Choisir une ville:</label>
+    <p>Choisir la valeur en abscisse</p>
+    <label for="ville-select">Choisir une donnée:</label>
 
-    <form action="apply_ville">
-        <select name="ville" id="ville-select" onchange="if(this.value != 0) { this.form.submit(); }">
+    <form action="abscisse">
+        <select name="ville" id="abs_select" onchange="if(this.value != 0) { this.form.submit(); }">
             <option value="0">--Choisir une Ville--</option>
             <option value="PARIS">PARIS</option>
             <option value="MARSEILLE">MARSEILLE</option>
             <option value="LYON">LYON</option>
         </select>
-    </form>
+    </from>
   </body>
-  {{plot_html|safe}}
-
   <a href="{% url 'accueil' %}">home</a>
 </html>
